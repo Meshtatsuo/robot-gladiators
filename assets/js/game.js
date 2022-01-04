@@ -7,13 +7,13 @@ var playerMoney = 10;
 //Log multiple values at once using commas
 console.log(playerName, playerAttack, playerHealth);
 
-var enemyName = "Roborto";
+var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
 var enemyHealth = 50;
 var enemyAttack = 12;
 
 //Functions
 
-var fight = function () {
+var fight = function (enemyName) {
   // Alert player that the round is starting
   window.alert("Welcome to Robot Gladiators!");
 
@@ -87,4 +87,6 @@ var fight = function () {
   }
 };
 
-fight();
+for (var i = 0; i < enemyNames.length; i++) {
+  fight(enemyNames[i]);
+}
