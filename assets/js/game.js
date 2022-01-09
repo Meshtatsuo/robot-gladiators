@@ -3,6 +3,18 @@ var randomNumber = function (min, max) {
   return value;
 };
 
+// function to set name
+var getPlayerName = function () {
+  var name = "";
+  // Continue to prompt the player until
+  while (name === "" || name === null) {
+    name = prompt("What is your robot's name?");
+  }
+
+  console.log("Your robot's name is " + name);
+  return name;
+};
+
 //shop items and costs
 var upgradeAmount = 6;
 var healAmount = 20;
@@ -12,7 +24,7 @@ var skipCost = 2;
 
 // Initialize player info
 var playerInfo = {
-  name: window.prompt("What is your robot's name?"),
+  name: getPlayerName(),
   health: 100,
   attack: 10,
   money: 10,
